@@ -9,7 +9,11 @@ repositories {
     mavenCentral()
 }
 
+val javalinVersion = property("javalin.version")
+
 dependencies {
+    implementation("io.javalin:javalin:$javalinVersion")
+
     testImplementation(kotlin("test"))
 }
 
