@@ -1,7 +1,10 @@
+import api.applyRoutes
 import io.javalin.Javalin
 
+const val port = 7070
+
 fun main() {
-    Javalin.create()
-        .get("/") {ctx -> ctx.result("Greetings World!")}
-        .start(7070)
+    val app = Javalin.create()
+    applyRoutes(app)
+    app.start(port)
 }
